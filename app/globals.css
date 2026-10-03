@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+/* Accessibility & High Contrast overrides */
+:root {
+  --focus-ring: #2563eb;
+  --focus-ring-offset: 3px;
+}
+
+/* Enhanced Focus Visible for Keyboard Navigation (WCAG 2.2 AA/AAA) */
+:focus-visible {
+  outline: 3px solid #2563eb !important;
+  outline-offset: 3px !important;
+}
+
+/* High Contrast Mode classes */
+.high-contrast {
+  --focus-ring: #facc15;
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+.high-contrast :focus-visible {
+  outline: 4px solid #facc15 !important;
+  outline-offset: 3px !important;
+}
+
+.high-contrast .border-slate-200,
+.high-contrast .border-gray-200,
+.high-contrast .border-slate-100 {
+  border-color: #ffffff !important;
+}
+
+.high-contrast .bg-white {
+  background-color: #0a0a0a !important;
+  color: #ffffff !important;
+}
+
+.high-contrast .bg-slate-50,
+.high-contrast .bg-gray-50,
+.high-contrast .bg-slate-100 {
+  background-color: #121212 !important;
+}
+
+.high-contrast .text-slate-600,
+.high-contrast .text-slate-500,
+.high-contrast .text-gray-500 {
+  color: #e2e8f0 !important;
+}
+
+/* Font Size Modifiers */
+.font-size-large {
+  font-size: 110%;
+}
+
+.font-size-xlarge {
+  font-size: 125%;
+}
+
+/* Reduced Motion Mode */
+.reduced-motion *,
+.reduced-motion *::before,
+.reduced-motion *::after {
+  animation-duration: 0.001ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.001ms !important;
+  scroll-behavior: auto !important;
+}
+
+/* Screen reader only utility if needed */
+.sr-only-focusable:not(:focus):not(:focus-within) {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border-width: 0 !important;
+}

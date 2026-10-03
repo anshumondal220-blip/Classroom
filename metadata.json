@@ -1,0 +1,6 @@
+{
+  "name": "Accessibility Navigator",
+  "description": "AI-powered college campus navigation system designed to help students with disabilities find accessible routes, facilities, and services across campus.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
